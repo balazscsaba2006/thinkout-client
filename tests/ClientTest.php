@@ -10,7 +10,7 @@ use ThinkOut\Client;
 class ClientTest extends TestCase
 {
     private Client $client;
-W
+
     public function setUp(): void
     {
         $username = getenv('API_USERNAME') ?: 'username';
