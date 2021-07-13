@@ -1,0 +1,65 @@
+{
+  "name": "balazscsaba2006/thinkout-client",
+  "type": "library",
+  "description": "A PHP client library that provides a native interface to the ThinkOut REST API.",
+  "keywords": [
+    "api",
+    "api-client",
+    "client",
+    "library",
+    "php",
+    "sdk",
+    "sdk-php",
+    "thinkout",
+    "thinkout-api"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "email": "balazscsaba2006@gmail.com",
+      "homepage": "https://www.humandirect.eu",
+      "name": "Balazs Csaba",
+      "role": "Creator, Developer"
+    }
+  ],
+  "support": {
+    "docs": "https://github.com/balazscsaba2006/thinkout-client/wiki",
+    "issues": "https://github.com/balazscsaba2006/thinkout-client/issues",
+    "source": "https://github.com/balazscsaba2006/thinkout-client/releases"
+  },
+  "require": {
+    "php": ">=7.4",
+    "ext-json": "*",
+    "guzzlehttp/guzzle": "^6.0 || ^7.0",
+    "symfony/property-info": "^5.3",
+    "symfony/serializer": "^5.3",
+    "symfony/filesystem": "^5.3",
+    "symfony/property-access": "^5.3",
+    "lcobucci/jwt": "^4.1"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.0",
+    "phpmd/phpmd": "^2.10",
+    "phpunit/phpunit": "^9.5",
+    "phpstan/extension-installer": "^1.1",
+    "phpstan/phpstan-phpunit": "^0.12",
+    "phpstan/phpstan": "^0.12",
+    "phpstan/phpstan-webmozart-assert": "^0.12.14"
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "scripts-descriptions": {
+    "test": "Run all PHPUnit tests."
+  },
+  "autoload": {
+    "psr-4": {
+      "ThinkOut\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ThinkOut\\Tests\\": "tests/"
+    }
+  }
+}

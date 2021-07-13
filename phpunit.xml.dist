@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd" colors="true" bootstrap="vendor/autoload.php">
+    <coverage>
+        <include>
+            <directory>src</directory>
+        </include>
+    </coverage>
+    <testsuite name="PHP Client for ThinkOut Tests Suite">
+        <directory suffix=".php">./tests/</directory>
+    </testsuite>
+    <php>
+        <env name="API_USERNAME" value="" />
+        <env name="API_PASSWORD" value="" />
+    </php>
+</phpunit>
