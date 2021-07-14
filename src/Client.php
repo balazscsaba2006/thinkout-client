@@ -34,9 +34,9 @@ class Client extends GuzzleClient
     /**
      * @throws GuzzleException|ThinkOutException
      *
-     * @return array<ResponseInterface>
+     * @return ResponseInterface|array<ResponseInterface>
      */
-    public function getCurrencies(): array
+    public function getCurrencies()
     {
         $response = $this->get('currencies');
 

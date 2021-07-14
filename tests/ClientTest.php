@@ -85,7 +85,7 @@ class ClientTest extends TestCase
             $this->assertEquals($decoded[$key]['parentId'], $category->getParentId());
 
             $children = $decoded[$key]['children'];
-            if (null !== $children) {
+            if (null !== $children && null !== $category->getChildren()) {
                 $this->assertCount(\count($children), $category->getChildren());
             } else {
                 $this->assertNull($category->getChildren());
