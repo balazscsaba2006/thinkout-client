@@ -2,22 +2,22 @@
 
 declare(strict_types = 1);
 
-namespace ThinkOut;
+namespace ThinkOut\Auth;
 
 use GuzzleHttp\Client as GuzzleClient;
 use Lcobucci\JWT\Configuration;
 use Lcobucci\JWT\UnencryptedToken;
 use Symfony\Component\Filesystem\Filesystem;
+use ThinkOut\HelperTrait;
 use ThinkOut\Response\SignInData;
-use Webmozart\Assert\Assert;
 
-class Authenticator
+class Authenticator implements AuthenticatorInterface
 {
     use HelperTrait;
 
     public const DESERIALIZE_FORMAT = 'json';
     private const API_URL = 'https://api.thinkout.io/api/partners/';
-    private const AUTH_FILE = '.auth';
+    private const AUTH_FILE = '.auth-thinkout.cache';
 
     private string $username;
     private string $password;
@@ -38,10 +38,12 @@ class Authenticator
         }
 
         // check if there is a cached authentication file
+        $path = sprintf('%s/%s', realpath(\dirname(__DIR__, 2)), self::AUTH_FILE);
         if (false === $forced && $this->getFilesystem()->exists([self::AUTH_FILE])) {
-            $path = sprintf('%s/%s', realpath(\dirname(__DIR__)), self::AUTH_FILE);
             $data = file_get_contents($path);
-            Assert::string($data);
+            if (false === $data) {
+                return $this->doAuthentication();
+            }
 
             $unserialized = unserialize($data, ['allowed_classes' => [SignInData::class]]);
             if (false !== $unserialized) {
@@ -76,7 +78,7 @@ class Authenticator
         $content = $response->getBody()->getContents();
         /** @var SignInData $signIn */
         $signIn = $this->getSerializer()->deserialize($content, SignInData::class, 'json');
-        $this->getFilesystem()->dumpFile(self::AUTH_FILE, $this->signInData->serialize());
+        $this->getFilesystem()->dumpFile(self::AUTH_FILE, $signIn->serialize());
 
         return $this->signInData = $signIn;
     }

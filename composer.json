@@ -44,7 +44,8 @@
     "phpstan/extension-installer": "^1.1",
     "phpstan/phpstan-phpunit": "^0.12",
     "phpstan/phpstan": "^0.12",
-    "phpstan/phpstan-webmozart-assert": "^0.12.14"
+    "phpstan/phpstan-webmozart-assert": "^0.12.14",
+    "coduo/php-matcher": "^6.0"
   },
   "scripts": {
     "test": "phpunit"

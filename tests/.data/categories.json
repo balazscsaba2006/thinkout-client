@@ -1,0 +1,151 @@
+[
+  {
+    "children": [
+      {
+        "children": null,
+        "name": "Rent",
+        "id": "1e798a34-2256-4966-8475-184a348dfa7b",
+        "type": 0,
+        "parentId": "0c250b5c-2d33-4f4e-a2d6-64f92cb0aa22"
+      },
+      {
+        "children": null,
+        "name": "Utilities",
+        "id": "b3895f86-5bbe-4934-a484-4c3b3563b4e0",
+        "type": 0,
+        "parentId": "0c250b5c-2d33-4f4e-a2d6-64f92cb0aa22"
+      },
+      {
+        "children": null,
+        "name": "Supplies",
+        "id": "26b703ab-bd3c-4290-83f4-a9390fd801b0",
+        "type": 0,
+        "parentId": "0c250b5c-2d33-4f4e-a2d6-64f92cb0aa22"
+      }
+    ],
+    "name": "Office",
+    "id": "0c250b5c-2d33-4f4e-a2d6-64f92cb0aa22",
+    "type": 0,
+    "parentId": null
+  },
+  {
+    "children": null,
+    "name": "Sales",
+    "id": "6ba55666-d278-47f0-8f6d-eb5dcf65c310",
+    "type": 1,
+    "parentId": null
+  },
+  {
+    "children": null,
+    "name": "Human Resources",
+    "id": "3eb130df-0f71-43b0-9887-ef5bfb234d7d",
+    "type": 0,
+    "parentId": null
+  },
+  {
+    "children": null,
+    "name": "Sold Assets",
+    "id": "43f80074-89d0-46bf-ad86-e02a96d07509",
+    "type": 1,
+    "parentId": null
+  },
+  {
+    "children": null,
+    "name": "Loans Received",
+    "id": "d9449414-f6f0-4862-a34f-c06e497f7a2d",
+    "type": 1,
+    "parentId": null
+  },
+  {
+    "children": null,
+    "name": "Services",
+    "id": "746b5ebe-c97a-4c31-8ad3-1ca118727e99",
+    "type": 0,
+    "parentId": null
+  },
+  {
+    "children": null,
+    "name": "Cars Costs",
+    "id": "3f4226bf-1773-414f-a708-27f863714a2e",
+    "type": 0,
+    "parentId": null
+  },
+  {
+    "children": null,
+    "name": "Uncategorized Inflows",
+    "id": "26ac5c53-6348-4b5a-84b9-41d2c00effab",
+    "type": 1,
+    "parentId": null
+  },
+  {
+    "children": null,
+    "name": "Inventory",
+    "id": "9919b898-24a4-48bd-a01e-a9543a197be2",
+    "type": 0,
+    "parentId": null
+  },
+  {
+    "children": null,
+    "name": "Sales Costs",
+    "id": "49b5cf38-6956-46b7-a57b-9570f9b002e4",
+    "type": 0,
+    "parentId": null
+  },
+  {
+    "children": [
+      {
+        "children": null,
+        "name": "Corporate Tax",
+        "id": "9580c332-69b1-414a-bbab-bb524911ab32",
+        "type": 0,
+        "parentId": "22308059-f842-437a-892c-c4d56b96e09b"
+      },
+      {
+        "children": null,
+        "name": "VAT",
+        "id": "0c44ad55-82a4-477c-ae7a-b842ac94422e",
+        "type": 0,
+        "parentId": "22308059-f842-437a-892c-c4d56b96e09b"
+      },
+      {
+        "children": null,
+        "name": "Employment Taxes",
+        "id": "a11e8574-5d62-40d9-a395-13d90c06c56d",
+        "type": 0,
+        "parentId": "22308059-f842-437a-892c-c4d56b96e09b"
+      },
+      {
+        "children": null,
+        "name": "Bank Fees",
+        "id": "4f87210b-51a4-40e5-840e-9f953126b0e3",
+        "type": 0,
+        "parentId": "22308059-f842-437a-892c-c4d56b96e09b"
+      }
+    ],
+    "name": "Taxes and Fees",
+    "id": "22308059-f842-437a-892c-c4d56b96e09b",
+    "type": 0,
+    "parentId": null
+  },
+  {
+    "children": null,
+    "name": "Purchased Assets",
+    "id": "73e7f6ac-fb92-4464-9758-eee9d3ce6854",
+    "type": 0,
+    "parentId": null
+  },
+  {
+    "children": null,
+    "name": "Loans Paid",
+    "id": "c230985e-7d61-4267-b16f-c4301f4f3b9f",
+    "type": 0,
+    "parentId": null
+  },
+  {
+    "children": null,
+    "name": "Uncategorized Outflows",
+    "id": "3af7ba01-289e-4a3c-897a-cc718a9c9940",
+    "type": 0,
+    "parentId": null
+  }
+]

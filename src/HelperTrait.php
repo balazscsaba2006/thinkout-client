@@ -8,6 +8,7 @@ use Exception;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\ResponseInterface;
 use Symfony\Component\Serializer\SerializerInterface;
+use ThinkOut\Auth\AuthenticationException;
 use ThinkOut\Response\ResponseInterface as ThinkOutResponseInterface;
 
 trait HelperTrait

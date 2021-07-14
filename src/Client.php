@@ -6,11 +6,11 @@ namespace ThinkOut;
 
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Exception\GuzzleException;
+use ThinkOut\Auth\AuthenticatorInterface;
 use ThinkOut\Response\Account;
 use ThinkOut\Response\Category;
 use ThinkOut\Response\Currency;
 use ThinkOut\Response\ResponseInterface;
-use ThinkOut\Response\SignInData;
 
 class Client extends GuzzleClient
 {
@@ -18,17 +18,15 @@ class Client extends GuzzleClient
 
     private const API_URL = 'https://api.thinkout.io/api/partners/';
 
-    private SignInData $signInData;
-
     /**
      * @param array<string, mixed> $config
      */
-    public function __construct(string $username, string $password, array $config = [])
+    public function __construct(AuthenticatorInterface $authenticator, array $config = [])
     {
-        $this->signInData = (new Authenticator($username, $password))->authenticate();
+        $signInData = $authenticator->authenticate();
 
         $config['base_uri'] = self::API_URL;
-        $config['headers']['Authorization'] = sprintf('Bearer %s', $this->signInData->getToken());
+        $config['headers']['Authorization'] = sprintf('Bearer %s', $signInData->getToken());
 
         parent::__construct($config);
     }
@@ -36,9 +34,9 @@ class Client extends GuzzleClient
     /**
      * @throws GuzzleException|ThinkOutException
      *
-     * @return ResponseInterface|array<ResponseInterface>
+     * @return array<ResponseInterface>
      */
-    public function getCurrencies()
+    public function getCurrencies(): array
     {
         $response = $this->get('currencies');
 

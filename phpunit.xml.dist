@@ -8,8 +8,4 @@
     <testsuite name="PHP Client for ThinkOut Tests Suite">
         <directory suffix=".php">./tests/</directory>
     </testsuite>
-    <php>
-        <env name="API_USERNAME" value="" />
-        <env name="API_PASSWORD" value="" />
-    </php>
 </phpunit>

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1c406dca-6a3b-4669-bd15-2d840fdad99e",
+    "balance": 2700,
+    "currency": "RON",
+    "currencyId": "0261283a-d83d-4570-ae1e-c0f611975c22",
+    "initialBalance": 400,
+    "initialDateTime": "2020-06-01T00:00:00",
+    "name": "Cash account in RON",
+    "originalName": "Cash account in RON",
+    "source": "Cash",
+    "bankName": "Cash"
+  },
+  {
+    "id": "4734198b-8045-42da-b142-31f2800f119c",
+    "balance": 30,
+    "currency": "EUR",
+    "currencyId": "d15bc01d-ad64-42fc-b43c-664c0d9bd970",
+    "initialBalance": 30,
+    "initialDateTime": "2020-07-01T00:00:00",
+    "name": "Cash account in EUR",
+    "originalName": "Cash account in EUR",
+    "source": "Cash",
+    "bankName": "Cash"
+  },
+  {
+    "id": "d42987ff-6e60-444c-a312-5d94c9d72ed4",
+    "balance": 503.46,
+    "currency": "RON",
+    "currencyId": "0261283a-d83d-4570-ae1e-c0f611975c22",
+    "initialBalance": 844.72,
+    "initialDateTime": "2019-10-29T00:00:00",
+    "name": "Revolut account in RON",
+    "originalName": "LT023250045725642117-RON",
+    "source": "SaltEdge",
+    "bankName": "Revolut"
+  },
+  {
+    "id": "f4aee5aa-5b17-47fc-95f3-03016b0d2e6b",
+    "balance": 0,
+    "currency": "EUR",
+    "currencyId": "d15bc01d-ad64-42fc-b43c-664c0d9bd970",
+    "initialBalance": 0,
+    "initialDateTime": "2020-10-27T21:39:14.755966",
+    "name": "Revolut account in EUR",
+    "originalName": "LT023250045725642117-EUR",
+    "source": "SaltEdge",
+    "bankName": "Revolut"
+  }
+]

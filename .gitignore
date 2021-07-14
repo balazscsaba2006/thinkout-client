@@ -3,4 +3,5 @@
 /vendor/
 .phpunit.result.cache
 .php-cs-fixer.cache
+.auth-thinkout.cache
 phpunit.xml

@@ -53,6 +53,9 @@ class Category implements ResponseInterface
         return $this->parentId;
     }
 
+    /**
+     * @return Category[]|null
+     */
     public function getChildren(): ?array
     {
         return $this->children;
