@@ -17,4 +17,7 @@ before_script:
   - travis_retry composer update --prefer-dist --no-interaction
 
 script:
+  - composer validate
+  - vendor/bin/php-cs-fixer fix --dry-run --diff
+  - vendor/bin/phpstan analyse --memory-limit=-1 --no-progress --no-interaction
   - vendor/bin/phpunit --coverage-clover=coverage.xml
