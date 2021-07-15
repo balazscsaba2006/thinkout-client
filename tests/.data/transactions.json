@@ -1,0 +1,93 @@
+[
+  {
+    "id": "54bbe584-aa7a-460a-b053-9c836dda5097",
+    "accountId": "1c406dca-6a3b-4669-bd15-2d840fdad99e",
+    "amount": 2342,
+    "categoryId": "3f4226bf-1773-414f-a708-27f863714a2e",
+    "convertedAmount": 2342,
+    "currencyId": "0261283a-d83d-4570-ae1e-c0f611975c22",
+    "dateTime": "2020-11-19T22:00:00",
+    "description": "Example cash transaction",
+    "isPending": false,
+    "source": "Cash",
+    "type": 0
+  },
+  {
+    "id": "726ba3d2-dbdd-41b4-b0b8-935b8678f3cd",
+    "accountId": "ee941ef0-7b31-449a-bc26-f00661dd7ef0",
+    "amount": 76,
+    "categoryId": "6ba55666-d278-47f0-8f6d-eb5dcf65c310",
+    "convertedAmount": 76,
+    "currencyId": "0261283a-d83d-4570-ae1e-c0f611975c22",
+    "dateTime": "2020-11-19T00:00:00",
+    "description": "Example cash transaction",
+    "isPending": false,
+    "source": "Cash",
+    "type": 1
+  },
+  {
+    "id": "a1a66bcd-17d6-4077-b4e5-8255550c3582",
+    "accountId": "1c406dca-6a3b-4669-bd15-2d840fdad99e",
+    "amount": 101.24812237204581,
+    "categoryId": "6ba55666-d278-47f0-8f6d-eb5dcf65c310",
+    "convertedAmount": 101.24812237204581,
+    "currencyId": "0261283a-d83d-4570-ae1e-c0f611975c22",
+    "dateTime": "2020-11-17T00:00:00",
+    "description": "Example cash transaction",
+    "isPending": false,
+    "source": "Cash",
+    "type": 1
+  },
+  {
+    "id": "30a09316-25c3-4966-8f51-99b6efc1a5ce",
+    "accountId": "d42987ff-6e60-444c-a312-5d94c9d72ed4",
+    "amount": 12,
+    "categoryId": "26ac5c53-6348-4b5a-84b9-41d2c00effab",
+    "convertedAmount": 12,
+    "currencyId": "0261283a-d83d-4570-ae1e-c0f611975c22",
+    "dateTime": "2020-10-20T00:00:00",
+    "description": "From Bogdan-Gabriel Mihai",
+    "isPending": false,
+    "source": "SaltEdge",
+    "type": 1
+  },
+  {
+    "id": "4742ebc8-f86f-45d8-8fb8-5ffcc31d5593",
+    "accountId": "d42987ff-6e60-444c-a312-5d94c9d72ed4",
+    "amount": 5,
+    "categoryId": "22308059-f842-437a-892c-c4d56b96e09b",
+    "convertedAmount": 5,
+    "currencyId": "0261283a-d83d-4570-ae1e-c0f611975c22",
+    "dateTime": "2020-10-20T00:00:00",
+    "description": "To Bogdan-Gabriel Mihai",
+    "isPending": false,
+    "source": "SaltEdge",
+    "type": 0
+  },
+  {
+    "id": "5a4dee15-3d97-409c-a86b-50a8fd69e090",
+    "accountId": "d42987ff-6e60-444c-a312-5d94c9d72ed4",
+    "amount": 5,
+    "categoryId": "26ac5c53-6348-4b5a-84b9-41d2c00effab",
+    "convertedAmount": 5,
+    "currencyId": "0261283a-d83d-4570-ae1e-c0f611975c22",
+    "dateTime": "2020-10-20T00:00:00",
+    "description": "From Bogdan-Gabriel Mihai",
+    "isPending": false,
+    "source": "SaltEdge",
+    "type": 1
+  },
+  {
+    "id": "d9e39fc5-70d9-4d10-96d7-76bdd93e8cca",
+    "accountId": "d42987ff-6e60-444c-a312-5d94c9d72ed4",
+    "amount": 7,
+    "categoryId": "22308059-f842-437a-892c-c4d56b96e09b",
+    "convertedAmount": 7,
+    "currencyId": "0261283a-d83d-4570-ae1e-c0f611975c22",
+    "dateTime": "2020-10-20T00:00:00",
+    "description": "To Bogdan-Gabriel Mihai",
+    "isPending": false,
+    "source": "SaltEdge",
+    "type": 0
+  }
+]

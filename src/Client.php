@@ -10,7 +10,9 @@ use ThinkOut\Auth\AuthenticatorInterface;
 use ThinkOut\Response\Account;
 use ThinkOut\Response\Category;
 use ThinkOut\Response\Currency;
+use ThinkOut\Response\Prediction;
 use ThinkOut\Response\ResponseInterface;
+use ThinkOut\Response\Transaction;
 
 class Client extends GuzzleClient
 {
@@ -65,5 +67,39 @@ class Client extends GuzzleClient
         $response = $this->get('accounts');
 
         return $this->handleResponse($response, Account::class . '[]');
+    }
+
+    /**
+     * @param array<string, mixed> $queryParams
+     *
+     * @throws GuzzleException|ThinkOutException
+     *
+     * @return ResponseInterface|array<ResponseInterface>
+     */
+    public function getTransactions(array $queryParams = [])
+    {
+        $allowedKeys = ['start', 'end', 'accountIds', 'categoryIds', 'type'];
+        $response = $this->get('transactions', [
+            'query' => RequestHelper::prepareParameters($queryParams, $allowedKeys),
+        ]);
+
+        return $this->handleResponse($response, Transaction::class . '[]');
+    }
+
+    /**
+     * @param array<string, mixed> $queryParams
+     *
+     * @throws GuzzleException|ThinkOutException
+     *
+     * @return ResponseInterface|array<ResponseInterface>
+     */
+    public function getPredictions(array $queryParams = [])
+    {
+        $allowedKeys = ['start', 'end', 'categoryIds', 'currencyIds', 'type', 'statuses', 'onlyOverdue'];
+        $response = $this->get('predictions', [
+            'query' => RequestHelper::prepareParameters($queryParams, $allowedKeys),
+        ]);
+
+        return $this->handleResponse($response, Prediction::class . '[]');
     }
 }

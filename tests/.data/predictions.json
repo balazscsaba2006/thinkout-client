@@ -1,0 +1,34 @@
+[
+  {
+    "id": "72a890fc-3db6-4b49-9f06-4c0e8cd0619c",
+    "amount": 23.12,
+    "categoryId": "06ff8741-21aa-4fd1-b4f0-81986eb6fd91",
+    "comment": "",
+    "convertedAmount": 112.6050649599811,
+    "currencyId": "d15bc01d-ad64-42fc-b43c-664c0d9bd970",
+    "dateTime": "2020-12-30T00:00:00",
+    "isOverdue": true,
+    "isRealised": false,
+    "description": "Test daily",
+    "linkedTransactions": ["4742ebc8-f86f-45d8-8fb8-5ffcc31d5593"],
+    "type": 0,
+    "isTouched": false,
+    "remainingAmount": 23.12
+  },
+  {
+    "id": "c280a361-a64c-4fb9-80d8-5018ed8b6de2",
+    "amount": 21.13,
+    "categoryId": "06ff8741-21aa-4fd1-b4f0-81986eb6fd91",
+    "comment": "Edit rec",
+    "convertedAmount": 102.91284699846024,
+    "currencyId": "d15bc01d-ad64-42fc-b43c-664c0d9bd970",
+    "dateTime": "2020-12-30T00:00:00",
+    "isOverdue": true,
+    "isRealised": false,
+    "description": "Postman Request",
+    "linkedTransactions": [],
+    "type": 0,
+    "isTouched": false,
+    "remainingAmount": 21.13
+  }
+]

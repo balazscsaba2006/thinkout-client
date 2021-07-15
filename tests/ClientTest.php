@@ -14,7 +14,9 @@ use ThinkOut\Client;
 use ThinkOut\Response\Account;
 use ThinkOut\Response\Category;
 use ThinkOut\Response\Currency;
+use ThinkOut\Response\Prediction;
 use ThinkOut\Response\SignInData;
+use ThinkOut\Response\Transaction;
 use Webmozart\Assert\Assert;
 
 class ClientTest extends TestCase
@@ -114,6 +116,59 @@ class ClientTest extends TestCase
             $this->assertEquals($decoded[$key]['originalName'], $account->getOriginalName());
             $this->assertEquals($decoded[$key]['source'], $account->getSource());
             $this->assertEquals($decoded[$key]['bankName'], $account->getBankName());
+        }
+    }
+
+    public function testGetTransactions(): void
+    {
+        $content = $this->loadJsonData('transactions.json');
+        $client = $this->createClientWithResponse($content);
+
+        /** @var Transaction[] $transactions */
+        $transactions = $client->getTransactions();
+        $this->assertCount(7, $transactions);
+
+        $decoded = json_decode($content, true, 512, JSON_THROW_ON_ERROR);
+        foreach ($transactions as $key => $transaction) {
+            $this->assertEquals($decoded[$key]['id'], $transaction->getId());
+            $this->assertEquals($decoded[$key]['accountId'], $transaction->getAccountId());
+            $this->assertEquals($decoded[$key]['amount'], $transaction->getAmount());
+            $this->assertEquals($decoded[$key]['categoryId'], $transaction->getCategoryId());
+            $this->assertEquals($decoded[$key]['convertedAmount'], $transaction->getConvertedAmount());
+            $this->assertEquals($decoded[$key]['currencyId'], $transaction->getCurrencyId());
+            $this->assertEquals(new \DateTime($decoded[$key]['dateTime']), $transaction->getDateTime());
+            $this->assertEquals($decoded[$key]['description'], $transaction->getDescription());
+            $this->assertEquals($decoded[$key]['isPending'], $transaction->isPending());
+            $this->assertEquals($decoded[$key]['source'], $transaction->getSource());
+            $this->assertEquals($decoded[$key]['type'], $transaction->getType());
+        }
+    }
+
+    public function testGetPredictions(): void
+    {
+        $content = $this->loadJsonData('predictions.json');
+        $client = $this->createClientWithResponse($content);
+
+        /** @var Prediction[] $predictions */
+        $predictions = $client->getPredictions();
+        $this->assertCount(2, $predictions);
+
+        $decoded = json_decode($content, true, 512, JSON_THROW_ON_ERROR);
+        foreach ($predictions as $key => $prediction) {
+            $this->assertEquals($decoded[$key]['id'], $prediction->getId());
+            $this->assertEquals($decoded[$key]['amount'], $prediction->getAmount());
+            $this->assertEquals($decoded[$key]['categoryId'], $prediction->getCategoryId());
+            $this->assertEquals($decoded[$key]['comment'], $prediction->getComment());
+            $this->assertEquals($decoded[$key]['convertedAmount'], $prediction->getConvertedAmount());
+            $this->assertEquals($decoded[$key]['currencyId'], $prediction->getCurrencyId());
+            $this->assertEquals(new \DateTime($decoded[$key]['dateTime']), $prediction->getDateTime());
+            $this->assertEquals($decoded[$key]['description'], $prediction->getDescription());
+            $this->assertEquals($decoded[$key]['isOverdue'], $prediction->isOverdue());
+            $this->assertEquals($decoded[$key]['isRealised'], $prediction->isRealised());
+            $this->assertSame($decoded[$key]['linkedTransactions'], $prediction->getLinkedTransactions());
+            $this->assertEquals($decoded[$key]['type'], $prediction->getType());
+            $this->assertEquals($decoded[$key]['isTouched'], $prediction->isTouched());
+            $this->assertEquals($decoded[$key]['remainingAmount'], $prediction->getRemainingAmount());
         }
     }
 
